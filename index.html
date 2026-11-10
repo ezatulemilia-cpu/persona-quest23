@@ -1,0 +1,264 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Persona Quest | Operation Black Bean</title><style>
+:root{--bg:#090c19;--panel:#171b32;--edge:#685c85;--cyan:#7be5ef;--gold:#f4cb77;--muted:#c2bfd5;--violet:#a98eff;--pink:#ef84cb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#f7f3ff;font:16px system-ui,Segoe UI,Arial;background:radial-gradient(ellipse at 85% 2%,#4a285e 0%,transparent 36%),radial-gradient(ellipse at 5% 40%,#1b4162 0%,transparent 42%),#090c19;min-height:100vh}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(120deg,transparent 47%,#f4cb77 48%,transparent 49%);background-size:100px 100px}main{max-width:1120px;margin:auto;padding:20px;position:relative}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,62px);margin:8px 0;text-shadow:0 3px 28px #a98eff80;letter-spacing:1px}h2{margin:8px 0 16px;font-family:Georgia,serif;font-size:clamp(24px,3vw,32px)}h3{margin:10px 0}.tag{color:var(--gold);letter-spacing:2.5px;font-size:11px;font-weight:900;text-transform:uppercase}.panel{background:linear-gradient(140deg,#25213ddf,#11192fe8);border:1px solid #76618c;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 15px 35px #0006,inset 0 1px #ffffff18}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}.card{border:1px solid #5c567b;background:linear-gradient(145deg,#302949,#1b2742);border-radius:12px;padding:17px;position:relative;overflow:hidden}.card:before{content:'✦';position:absolute;right:13px;top:7px;color:#d9b46d55;font-size:24px}button,select,input{font:inherit}button{background:linear-gradient(105deg,#e5ba6c,#fff0ac,#c58a50);color:#241b28;border:1px solid #ffe6ac;border-radius:8px;padding:12px 17px;font-weight:900;cursor:pointer;margin:4px 4px 4px 0;box-shadow:0 4px 0 #8e643e,0 8px 20px #0004;transition:transform .12s,filter .12s}button:hover{filter:brightness(1.09);transform:translateY(-1px)}button:active{transform:translateY(2px);box-shadow:0 2px 0 #8e643e}button.secondary{background:#30314e;color:#e9e7ff;border:1px solid #8475a3;box-shadow:none}button:disabled{opacity:.4;cursor:not-allowed}input,select{width:100%;background:#0e1730;color:white;border:1px solid #8b7aa3;border-radius:9px;padding:12px;margin:6px 0 12px}p{line-height:1.6}.muted{color:var(--muted)}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.stat{background:#25233e;border:1px solid #706180;border-radius:8px;padding:10px 15px}.stat strong{color:var(--gold)}.pill{display:inline-block;padding:5px 10px;border-radius:6px;background:#51416d;color:#f9e6b7;font-size:12px;margin:3px}.good{color:#a1f4c4}.bad{color:#ff9e9e}.hidden{display:none}.choices button{display:block;width:100%;text-align:left;background:#2b2c50;color:white;border:1px solid #776a9b;box-shadow:none}.choices button:hover{border-color:var(--gold)}.bar{height:8px;background:#343653;border-radius:10px;overflow:hidden}.bar span{display:block;height:100%;background:var(--gold)}footer{font-size:12px;color:#b7b3c9;margin:30px 0}label{display:block;margin-top:10px}.alert{border-left:4px solid var(--gold);padding:12px;background:#3a3040}.hero{display:flex;align-items:center;gap:18px}.crest{width:80px;height:92px;flex:none;display:grid;place-items:center;font-size:40px;color:#ffe3a0;background:linear-gradient(155deg,#6e4d8a,#272647);border:3px double #e7c783;clip-path:polygon(50% 0,94% 18%,94% 69%,50% 100%,6% 69%,6% 18%);text-shadow:0 3px 12px #000}.hero-banner{padding:24px;background:linear-gradient(120deg,#2b2147,#15243d 70%);border:1px solid #b59469;border-radius:16px;position:relative;overflow:hidden}.hero-banner:after{content:'✧';position:absolute;right:5%;top:-30px;font-size:180px;color:#e2b97718;pointer-events:none}.map{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0}.node{border:1px solid #746185;background:#22253d;border-radius:10px;text-align:center;padding:12px 6px;font-size:12px;color:#ccc6d7}.node.active{border-color:#f4cb77;box-shadow:0 0 16px #dcb56a55;color:#fff1bd}.node.done{background:#25483f;color:#aaf0d2}.agent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.agent{border:1px solid #7d6b92;background:#1e2441;border-radius:12px;padding:14px;cursor:pointer;text-align:center;min-height:145px;transition:.15s}.agent.selected{border:2px solid var(--gold);background:linear-gradient(140deg,#534067,#283957);box-shadow:0 0 20px #e8c67855}.agent-icon{font-size:38px;display:block;margin:5px}.agent small{display:block;color:#c9c3d8;margin-top:6px;line-height:1.4}.ability{background:#2e2b4a;border-left:3px solid #d6b779;padding:11px;margin:12px 0}.achievement{border:1px solid #6e6088;padding:10px;border-radius:10px;background:#25233e}.victory{font-family:Georgia,serif;color:#ffdfa0;text-shadow:0 0 24px #e7ba7a;font-size:clamp(35px,6vw,64px);text-align:center}.pulse{animation:glow 2.5s infinite alternate}@keyframes glow{from{box-shadow:0 0 4px #d8ae5d33}to{box-shadow:0 0 20px #d8ae5d88}}@media(max-width:560px){main{padding:12px}.panel{padding:15px}.hero{gap:9px}.crest{width:60px;height:70px;font-size:30px}.agent-grid{grid-template-columns:1fr}.agent{min-height:unset}.map{gap:5px}.node{font-size:11px;padding:9px 3px}}
+.mastery-panel{margin:20px 0;padding:16px;border:1px solid #b69a64;border-radius:14px;background:linear-gradient(135deg,#302446,#1b3040)}.mastery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.mastery-token{text-align:center;padding:12px 5px;border:1px solid #776b8d;border-radius:10px;background:#191d36}.mastery-token small,.champion small{display:block;font-size:11px;margin-top:7px;color:#c7c0d7}.mastery-token.locked{opacity:.52;filter:grayscale(.75)}.mastery-token.earned{border-color:#f4cb77;box-shadow:inset 0 0 15px #f4cb771c}.champion{margin-top:12px;padding:14px;text-align:center;border:1px solid #a88b56;border-radius:10px}.champion.earned{background:linear-gradient(115deg,#745129,#493d63);box-shadow:0 0 22px #f4cb7740}.champion.locked{opacity:.7}@media(max-width:420px){.mastery-token{padding:8px 2px}.mastery-token b{font-size:12px}.mastery-token small{font-size:10px}}.mastery-challenge{border:2px solid #d9b86e;background:linear-gradient(135deg,#3c2856,#162e42);border-radius:15px;padding:18px;margin:18px 0}.mastery-challenge textarea{width:100%;min-height:125px;resize:vertical;background:#10172e;color:white;border:1px solid #a18cb9;border-radius:10px;padding:12px;font:inherit}.mastery-challenge fieldset{border:1px solid #786a98;border-radius:12px;margin:12px 0;padding:12px}.mastery-challenge legend{font-weight:800;color:#ffe0a1}.mastery-challenge .option{display:block;padding:8px;border-radius:7px}.mastery-challenge .option input{width:auto;margin-right:10px}.mastery-challenge .option:hover{background:#ffffff12}.mastery-challenge .feedback{background:#162c39;padding:12px;border-left:3px solid #f4cb77;margin:12px 0}.mastery-challenge .feedback p{margin:6px 0} 
+.music-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;border:1px solid #76618c;border-radius:12px;background:#191b34;max-width:100%}.music-controls button{margin:0;padding:9px 12px;box-shadow:none}.music-controls label{margin:0;font-size:12px;color:#eee1ff}.music-controls input[type=range]{width:86px;padding:0;margin:0;accent-color:#f4cb77;vertical-align:middle}.music-controls .music-status{font-size:11px;color:#c2bfd5}.music-controls button:focus-visible,.music-controls input:focus-visible{outline:3px solid #7be5ef;outline-offset:3px}@media(max-width:560px){.music-controls{width:100%;justify-content:center}}
+
+/* Non-blocking MOBA-style result popups */
+#battleNotice{position:fixed;z-index:9999;left:50%;top:16%;transform:translate(-50%,-22px) scale(.95);width:min(90vw,410px);padding:19px 23px;border-radius:18px;border:2px solid #e5b75d;background:linear-gradient(145deg,#1d2245f5,#211b37f8);box-shadow:0 0 0 9999px #03051538,0 12px 55px #000b;text-align:center;pointer-events:none;opacity:0;transition:opacity .2s,transform .2s;visibility:hidden}
+#battleNotice.show{opacity:1;transform:translate(-50%,0) scale(1);visibility:visible}
+#battleNotice.danger{border-color:#ff6679;box-shadow:0 0 0 9999px #03051538,0 0 34px #e03d5c88}
+#battleNotice.levelup{border-color:#eecb72;box-shadow:0 0 0 9999px #03051538,0 0 34px #eecb7288}
+#battleNotice .notice-icon{font-size:39px;line-height:1.2}#battleNotice .notice-title{font-weight:900;font-size:clamp(23px,6vw,35px);letter-spacing:2px;color:#f5d588}#battleNotice.danger .notice-title{color:#ff8496}#battleNotice .notice-message{font-size:14px;line-height:1.5;color:#f6f0ff;white-space:pre-line;max-height:23vh;overflow:auto}
+@media(prefers-reduced-motion:reduce){#battleNotice{transition:none}}
+</style></head><body><main><header><div><div class="hero"><div class="crest" aria-hidden="true">⚔</div><div><div class="tag">PERSONA QUEST // CHRONICLES OF THE EVIDENCE REALM</div><h1>BLACK <span style="color:var(--gold)">BEAN</span> LEGENDS</h1><div class="muted">MOBA-inspired consumer insight adventure · Independent ZUS Coffee classroom case</div></div></div></div><div class="music-controls" role="group" aria-label="Original game background music"><button type="button" id="musicToggle" class="secondary" aria-pressed="false" onclick="toggleMusic()">♫ Play music</button><label for="musicVolume">Volume <input type="range" id="musicVolume" min="0" max="100" value="35" step="5" oninput="setMusicVolume(this.value)" aria-label="Music volume"></label><span id="musicStatus" class="music-status" aria-live="polite">Optional · off by default</span></div><div class="stat">🏅 <span id="rankTop">ROOKIE</span></div></header><div id="battleNotice" role="status" aria-live="assertive" aria-atomic="true"><div class="notice-icon" id="noticeIcon"></div><div class="notice-title" id="noticeTitle"></div><div class="notice-message" id="noticeMessage"></div></div><div id="stats" class="stats"></div><div id="stageMap"></div><div id="app"></div><footer>Independent educational simulation. ZUS Coffee is used as a case-study brand; this game is not affiliated with or endorsed by ZUS Coffee. All customer records, spending figures and interviews are fictional. Progress stays in this browser only.</footer></main><script>
+const files=[
+{id:'demo',name:'Identity Dossier',type:'Demography',cost:10,round:1,info:'Aina, 20, is a second-year university student in Kuala Lumpur. She lives in a shared rental room, has no full-time job and receives RM600 monthly for discretionary spending.',insight:'Age and budget describe context, not purchase motivation.'},
+{id:'receipt',name:'Transaction Log',type:'Habits',cost:20,round:1,info:'Aina buys a fictional RM12 ZUS Coffee drink on about three weekdays each week. Over four weeks, that is RM144. She sometimes uses a promotion, but not every time.',insight:'Frequency is observed; the cause is not yet established.'},
+{id:'diary',name:'Campus Schedule',type:'Lifestyle',cost:20,round:1,info:'On Tuesdays and Thursdays Aina studies in the library after classes. She usually meets two friends for group assignments and sometimes purchases coffee on the way.',insight:'The purchase may be linked to routine, convenience or social context.'},
+{id:'budget',name:'Budget Breakdown',type:'True situation',cost:25,round:2,info:'The RM600 is discretionary money after rent and tuition are covered separately. She allocates RM220 to campus meals, RM90 to transport, RM80 to phone and essentials, and tries to save RM60. The remainder is flexible.',insight:'Calling her financially irresponsible from the RM600 figure alone would be premature.'},
+{id:'interview',name:'Private Interview',type:'True situation',cost:30,round:2,info:'Aina says: “On heavy days I want a short break that feels like mine. I still compare prices. Sometimes I skip coffee when I have another expense.”',insight:'Coffee is described as an occasional self-reward, with evidence of budget trade-offs.'},
+{id:'values',name:'Values Memo',type:'Spiritual core',cost:30,round:2,info:'Aina says she values independence, gratitude toward her family, and making steady progress in her studies. She wants small moments of enjoyment without feeling she is wasting family support.',insight:'Personal meaning and values are not the same as religion. Do not infer religious affiliation.'},
+{id:'twist',name:'CLASSIFIED: The Twist',type:'Contradictory evidence',cost:35,round:2,info:'Last month Aina declined a coffee invitation twice to pay for printing and an urgent transport expense. She also buys inexpensive drinks at other outlets. She is not uniformly brand-loyal.',insight:'The better hypothesis is situational self-reward under budget constraints, not automatic brand loyalty.'}
+];
+const quizzes=[
+{q:'Aina buys a RM12 drink three times a week. Which claim is justified?',opts:['She is financially careless','She purchases coffee regularly; her motive is not yet known','She wants to impress classmates','She cannot study without caffeine'],a:1,why:'Frequency does not establish motive.'},
+{q:'Which is demographic information?',opts:['She values independence','She is 20 years old','She uses coffee as a break','She compares promotions'],a:1,why:'Age is demographic; the others describe values or behaviour.'},
+{q:'A transaction log is strongest evidence for which claim?',opts:['How often coffee was purchased','How much she loves the brand','Her religious beliefs','Why she is anxious'],a:0,why:'Receipts document purchases, not hidden feelings or beliefs.'},
+{q:'Aina says coffee feels like a small reward. This is best classified as:',opts:['An objectively proven universal motive','A self-reported motivation to evaluate alongside other evidence','A demographic characteristic','Proof of caffeine dependence'],a:1,why:'Interview statements provide useful but self-reported evidence.'},
+{q:'Which response best respects limited research evidence?',opts:['All students buy coffee for belonging','Aina is typical of all Malaysian students','This case suggests a hypothesis to test with more customers','The brand should raise all prices'],a:2,why:'One synthetic case cannot establish population-wide patterns.'},
+{q:'Aina skips coffee when printing costs rise. What does this suggest?',opts:['Her choices may depend on competing priorities','She never likes coffee','She is loyal to only one brand','She always buys the cheapest item'],a:0,why:'Changing circumstances can alter purchasing decisions.'}
+];
+const base=()=>({name:'',mode:'solo',agent:'seer',abilityUsed:false,shieldCharges:0,oracleVision:false,round:1,credits:100,points:0,opened:[],answered:[],reasons:[],final:null,completed:false,plays:0});let state;try{state=JSON.parse(localStorage.getItem('pq_moba_v2'))||base()}catch(e){state=base()}const $=id=>document.getElementById(id),save=()=>localStorage.setItem('pq_moba_v2',JSON.stringify(state));const rank=p=>p>=350?'INSIGHT LEGEND':p>=270?'MASTER ANALYST':p>=190?'FIELD SPECIALIST':p>=100?'DETECTIVE':'ROOKIE';const masteryKey='pq_moba_mastery_v3';
+function loadMastery(){try{const x=JSON.parse(localStorage.getItem(masteryKey));return x&&typeof x==='object'?x:{}}catch(e){return {}}}
+let mastery=loadMastery();
+function masteryFor(name,mode){const key=mode+'::'+name.trim().toLocaleLowerCase();return mastery[key]||{heroes:{},runs:0}}
+function recordMastery(){const key=state.mode+'::'+state.name.trim().toLocaleLowerCase();let m=masteryFor(state.name,state.mode);m.heroes=m.heroes||{};m.heroes[state.agent]={completed:true,bestXP:Math.max(state.points,m.heroes[state.agent]?.bestXP||0),runs:(m.heroes[state.agent]?.runs||0)+1};m.runs=(m.runs||0)+1;mastery[key]=m;try{localStorage.setItem(masteryKey,JSON.stringify(mastery))}catch(e){}}
+function masteryMarkup(name,mode){const m=masteryFor(name,mode),done=Object.keys(agents).filter(k=>m.heroes?.[k]?.completed),champion=!!m.challenge?.passed;return `<section class="mastery-panel"><div class="tag">HERO MASTERY · ${done.length}/3 COMPLETED</div><h3>${champion?'🏆 CONSUMER INSIGHT CHAMPION UNLOCKED':'🏅 Hero Mastery Collection'}</h3><p class="muted">Master all three heroes, then pass the final synthesis mission to earn the Champion badge. Progress is saved for this player name and mode on this browser.</p><div class="mastery-grid">${Object.entries(agents).map(([k,a])=>`<div class="mastery-token ${m.heroes?.[k]?.completed?'earned':'locked'}"><span class="agent-icon">${a.icon}</span><b>${a.name}</b><small>${m.heroes?.[k]?.completed?'✓ MASTERED · Best '+m.heroes[k].bestXP+' XP':'🔒 Not yet mastered'}</small></div>`).join('')}</div><div class="champion ${champion?'earned':'locked'}">${champion?'🏆':'🔒'} <b>CONSUMER INSIGHT CHAMPION</b><small>${champion?'Three heroes mastered and synthesis mission passed. Evidence-based insight achieved!':done.length===3?'All heroes mastered! Complete the Hero Mastery Challenge to earn this badge.':'Complete Oracle, Sentinel and Tracker, then pass the Hero Mastery Challenge.'}</small></div></section>`}
+function stats(){ $('stats').innerHTML=`<div class="stat">🪙 Credits <strong>${state.credits}</strong></div><div class="stat">⚡ Insight XP <strong>${state.points}</strong></div><div class="stat">📁 Evidence <strong>${state.opened.length}/7</strong></div><div class="stat">🎯 Round <strong>${state.round}/3</strong></div>`;$('rankTop').textContent=rank(state.points)}function render(){stats();stageMap();if(!state.name){welcome();$('player').addEventListener('input',showWelcomeMastery);$('mode').addEventListener('change',showWelcomeMastery);showWelcomeMastery();return}if(state.completed)return results();if(state.round===3)return showdown();vault()}
+
+const agents={
+seer:{name:'Oracle',icon:'🔮',role:'Insight Mage',power:'SOUL SIGHT · In the final boss battle, reveal two guidance hints about the hidden motivations and values. No answer is automatically selected.'},
+guardian:{name:'Sentinel',icon:'🛡️',role:'Economy Guardian',power:'IRON RESERVE · Activate a shield that halves the price of your next TWO evidence purchases (rounded up).'},
+ranger:{name:'Tracker',icon:'🏹',role:'Intel Scout',power:'EAGLE EYE · Unlock ONE available evidence file for free, regardless of its credit price.'}};
+let chosenAgent='seer';
+function pickAgent(key){chosenAgent=key;document.querySelectorAll('.agent').forEach(el=>el.classList.toggle('selected',el.dataset.agent===key));}
+function stageMap(){let names=['RECON','INTEL BREACH','PERSONA BOSS'];$('stageMap').innerHTML=state.name?'<div class="map">'+names.map((n,i)=>`<div class="node ${state.completed||state.round>i+1?'done':state.round===i+1?'active pulse':''}">${state.completed||state.round>i+1?'✓':i+1===state.round?'⚔':'🔒'} ACT ${i+1}<br><b>${n}</b></div>`).join('')+'</div>':''}
+function ability(){
+ if(state.abilityUsed)return alert('Your hero skill has already been used this mission.');
+ if(state.agent==='seer'){
+  if(state.round!==3)return alert('Oracle uses Soul Sight during the final boss battle.');
+  state.oracleVision=true;state.abilityUsed=true;save();render();return;
+ }
+ if(state.agent==='guardian'){
+  state.shieldCharges=2;state.abilityUsed=true;save();render();return;
+ }
+ if(state.agent==='ranger'){
+  let choices=files.filter(f=>f.round<=state.round&&!state.opened.includes(f.id));
+  if(!choices.length)return alert('No available locked files. Advance the round or choose another time.');
+  const picked=prompt('EAGLE EYE: Choose a file number to unlock for FREE:\n'+choices.map((f,i)=>`${i+1}. ${f.name} (${f.cost} DC value)`).join('\n'));
+  if(picked===null)return;
+  let idx=Number(picked)-1;
+  if(!Number.isInteger(idx)||idx<0||idx>=choices.length)return alert('Choose a valid file number.');
+  state.opened.push(choices[idx].id);state.points+=10;state.abilityUsed=true;save();render();return;
+ }
+}
+function skillButton(){let a=agents[state.agent]||agents.seer;let locked=state.agent==='seer'&&state.round!==3;let label=state.abilityUsed?'SKILL USED':locked?'AVAILABLE IN FINAL ROUND':state.agent==='guardian'?'ACTIVATE IRON RESERVE':state.agent==='ranger'?'SCOUT A FREE FILE':'ACTIVATE SOUL SIGHT';return `<div class="ability"><b>${a.icon} ${a.name} · ${a.role}</b><p>${a.power}</p>${state.shieldCharges?`<p class="good">🛡️ ${state.shieldCharges} discounted purchases remaining.</p>`:''}<button class="secondary" ${(state.abilityUsed||locked)?'disabled':''} onclick="ability()">${label}</button></div>`}
+function fileCost(f){return state.shieldCharges>0?Math.ceil(f.cost/2):f.cost}
+function welcome(){$('app').innerHTML=`<section class="panel hero-banner"><div class="tag">SUMMONER BRIEFING · CASE 001</div><h2>The RM12 Financial Paradox</h2><p>Enter the Evidence Realm. A student with limited spending money repeatedly buys coffee. Collect intel, manage your gold, and defeat the final Persona Boss with proof—not assumptions.</p><div class="alert">No account, no paid server, no leaderboard. Play on your phone in class and replay later. Progress saves in this browser.</div><label>Hero / squad name<input id="player" maxlength="35" placeholder="e.g. The Insight Guild"></label><label>Battle mode<select id="mode"><option value="solo">Solo hero</option><option value="squad">Squad (one shared device)</option></select></label><div class="tag">CHOOSE YOUR INVESTIGATION HERO</div><div class="agent-grid">${Object.entries(agents).map(([k,a])=>`<div class="agent ${chosenAgent===k?'selected':''}" data-agent="${k}" role="button" tabindex="0" onclick="pickAgent('${k}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();pickAgent('${k}')}" aria-label="Choose ${a.name}"><span class="agent-icon">${a.icon}</span><b>${a.name}</b><small>${a.role}<br>${a.power}</small></div>`).join('')}</div><p class="muted">Each hero has a unique power. Replay with another hero to investigate differently!</p><div id="welcomeMastery"></div><button onclick="start()">⚔ ENTER THE REALM →</button></section>`}
+function showWelcomeMastery(){let name=$('player')?.value.trim(),mode=$('mode')?.value;if($('welcomeMastery'))$('welcomeMastery').innerHTML=name?masteryMarkup(name,mode):'<p class="muted">Enter your existing hero name to view saved mastery badges.</p>'}
+function start(){let name=$('player').value.trim();if(!name)return alert('Enter your detective or squad name.');state.name=name;state.mode=$('mode').value;state.agent=chosenAgent;save();render()}
+function vault(){let r=state.round;let available=files.filter(f=>f.round<=r);$('app').innerHTML=`<section class="panel"><div class="tag">ACT ${r} // ${r===1?'RECON':'INTEL BREACH'}</div><h2>${r===1?'Investigate the surface':'Investigate the hidden reality'}</h2>${skillButton()}<p class="muted">Buy evidence using credits. Earn +20 credits and +25 XP per correct quiz (one attempt each). Wrong answers still reveal learning feedback. Keep enough evidence to support your final persona.</p><div class="grid">${available.map(f=>`<div class="card"><span class="pill">${f.type}</span><h3>${f.name}</h3><p class="muted">${state.opened.includes(f.id)?f.info:'🔒 Classified customer intelligence'}</p>${state.opened.includes(f.id)?`<p class="good">INSIGHT: ${f.insight}</p>`:`<button ${state.credits<fileCost(f)?'disabled':''} onclick="buy('${f.id}')">Unlock · ${fileCost(f)} DC${state.shieldCharges?` (was ${f.cost})`:``}</button>`}</div>`).join('')}</div></section><section class="panel"><h2>⚡ Minion Challenges · Earn Gold</h2><p class="muted">Answer rapid consumer insight questions to replenish your investigation budget.</p><div id="quizarea"></div></section><section class="panel"><button onclick="advance()">${r===1?'ADVANCE TO ROUND 2 →':'ENTER FINAL SHOWDOWN →'}</button><button class="secondary" onclick="restart()">Restart mission</button></section>`;quizarea()}
+function buy(id){let f=files.find(x=>x.id===id);if(!f||state.opened.includes(id)||state.credits<fileCost(f)||f.round>state.round)return;state.credits-=fileCost(f);if(state.shieldCharges>0)state.shieldCharges--;state.opened.push(id);state.points+=10;save();render()}
+function quizarea(){let qs=quizzes.map((q,i)=>({...q,i})).filter(q=>!state.answered.includes(q.i)&& (state.round===1?q.i<3:true));let q=qs[0];$('quizarea').innerHTML=q?`<div class="card"><div class="tag">CHALLENGE ${q.i+1}/6</div><h3>${q.q}</h3><div class="choices">${q.opts.map((o,i)=>`<button onclick="answer(${q.i},${i})">${'ABCD'[i]}. ${o}</button>`).join('')}</div></div>`:'<p class="good">All available challenges completed. Advance to continue.</p>'}
+function answer(i,a){if(state.answered.includes(i))return;let q=quizzes[i],ok=a===q.a;state.answered.push(i);if(ok){state.credits+=20;state.points+=25}state.reasons.push({q:i,correct:ok});save();render();battleFeedback(ok,(ok?'+20 DC · +25 XP. ':'No credits this attempt. ')+q.why)}
+function advance(){if(state.round===1){state.round=2}else if(state.round===2){state.round=3}save();render()}
+const fields=[{key:'segment',label:'Which segment description is most defensible?',opts:['Every Malaysian student who drinks coffee','Budget-conscious university student balancing small rewards and priorities','Affluent professionals seeking luxury coffee','Students who are addicted to caffeine'],right:1},{key:'need',label:'Which unmet need is most plausible?',opts:['A guaranteed cure for stress','An affordable moment of personal reward during busy days','To demonstrate higher social status','To spend all available money'],right:1},{key:'values',label:'Which deeper value is supported?',opts:['Independence balanced with responsibility','A specific religious affiliation','Unlimited desire for prestige','Disregard for family expectations'],right:0},{key:'strategy',label:'Which marketing action is best aligned?',opts:['Promote high-cost daily subscriptions to all students','Test flexible student-value offers emphasizing occasional breaks and price transparency','Assume all students want luxury packaging','Encourage ignoring financial priorities'],right:1},{key:'evidence',label:'What is the strongest evidence to support your persona?',opts:['Only the customer’s age','Only the number of receipts','Purchase records combined with interview and budget evidence','An unsupported guess about her friends'],right:2}];
+function showdown(){$('app').innerHTML=`<section class="panel"><div class="tag">ACT 3 // BOSS BATTLE</div><h2>⚔ Final Boss: The Financial Paradox</h2>${skillButton()}${state.oracleVision?`<div class="ability"><b>🔮 SOUL SIGHT — Motivation Clues</b><p>Need: look for the purpose of a small reward rather than assuming the drink fixes academic stress.</p><p>Values: distinguish responsibility and independence from unverified religious or status claims.</p></div>`:``}<div class="alert">Aina sometimes chooses coffee as a small reward, but she also skips purchases when expenses rise. Build an evidence-backed persona, not a stereotype.</div><p class="muted">Each correct strategic decision earns 30 XP. You earn up to 50 bonus XP for a well-supported evidence selection. The mission can be completed even if you bought few files.</p><div id="fields">${fields.map((f,i)=>`<label><b>${i+1}. ${f.label}</b><select id="f${i}"><option value="">Select a conclusion</option>${f.opts.map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select></label>`).join('')}</div><label><b>Evidence references</b> (select up to 3 files you unlocked)</label><div>${files.filter(f=>state.opened.includes(f.id)).map(f=>`<label><input style="width:auto;margin-right:8px" type="checkbox" class="ev" value="${f.id}">${f.name}</label>`).join('')||'<p class="muted">No purchased files yet. You can still submit, but your evidence bonus will be zero.</p>'}</div><label><b>One-sentence persona insight (optional reflection)</b><input id="reflection" maxlength="280" placeholder="Aina buys coffee when... because..."></label><button onclick="submitFinal()">SUBMIT PERSONA →</button><button class="secondary" onclick="state.round=2;save();render()">Return to evidence vault</button></section>`}
+function submitFinal(){let ans=fields.map((f,i)=>$('f'+i).value);if(ans.some(a=>a===''))return alert('Complete all five persona decisions.');let selected=[...document.querySelectorAll('.ev:checked')].map(e=>e.value);if(selected.length>3)return alert('Choose at most three evidence files.');let correct=ans.reduce((s,a,i)=>s+(Number(a)===fields[i].right?1:0),0);let types=new Set(selected.map(id=>files.find(f=>f.id===id).type));let evidenceBonus=Math.min(50,selected.length*10+(types.size>=2?20:0));let reflection=$('reflection').value.trim();state.points+=correct*30+evidenceBonus;state.final={ans,correct,selected,evidenceBonus,reflection};state.completed=true;state.plays++;recordMastery();save();render();battleFeedback(correct===fields.length,correct===fields.length?'Perfect persona analysis! 5/5 decisions correct.':`${correct}/${fields.length} persona decisions correct. Review the debrief and replay to improve.`)}
+function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+// HERO MASTERY CHALLENGE: unlocks after all three different hero completions.
+// Objective questions are auto-scored; narrative is retained for lecturer review, never keyword-graded.
+const masteryQuestions=[
+ {role:'TRACKER · Behaviour',q:'Aina purchased three RM12 coffees this week. Which inference is justified?',opts:['She has no financial concerns.','She bought coffee three times; the reasons require more evidence.','She values prestige above everything.'],right:1,why:'Receipts establish purchases, not underlying motives.'},
+ {role:'SENTINEL · Constraints',q:'Aina skips coffee when transport costs rise. What does this reveal?',opts:['Her spending choices depend on competing budget priorities.','She never values coffee.','She will always buy the cheapest drink.'],right:0,why:'Financial context helps explain why purchasing behaviour changes.'},
+ {role:'ORACLE · Values',q:'Aina says a coffee break feels like a small reward, but she wants to remain financially responsible. Which conclusion is strongest?',opts:['Her beliefs prove every student shares her motivation.','Her values cannot affect purchasing.','A small reward may matter, but responsibility limits when she buys.'],right:2,why:'Self-reported meaning and constraints can jointly inform a tentative persona.'}
+];
+function masteryChallengeMarkup(){
+ const m=masteryFor(state.name,state.mode),done=Object.keys(agents).filter(k=>m.heroes?.[k]?.completed);
+ if(done.length<3)return `<section class="mastery-challenge"><div class="tag">🔒 SECRET BONUS MISSION</div><h3>Hero Mastery Challenge</h3><p>Complete the case with all three heroes to unlock a short synthesis mission. ${done.length}/3 heroes mastered.</p></section>`;
+ if(m.challenge?.passed)return `<section class="mastery-challenge"><div class="tag">🏆 ULTIMATE MASTERY COMPLETE</div><h3>Consumer Insight Champion</h3><p>You've connected purchasing behaviour, financial reality and deeper values. Your written explanation is saved for lecturer review.</p><button class="secondary" onclick="downloadReport()">EXPORT CHAMPION REPORT</button></section>`;
+ const old=m.challenge?.draft||{};
+ return `<section class="mastery-challenge" id="masteryMission"><div class="tag">⚔ SECRET BONUS MISSION · UNLOCKED</div><h2>Triad of Insight: Final Trial</h2><p>Use what you learned as Tracker, Sentinel and Oracle. Earn the Champion badge by answering all three perspective questions correctly and writing a supported consumer insight. You can retry; no credits or XP are lost.</p>${masteryQuestions.map((q,i)=>`<fieldset><legend>${i+1}. ${q.role}</legend><p>${q.q}</p>${q.opts.map((opt,j)=>`<label class="option"><input type="radio" name="masteryQ${i}" value="${j}" ${old.answers?.[i]===j?'checked':''}>${opt}</label>`).join('')}</fieldset>`).join('')}<label><b>Final synthesis (minimum 80 characters)</b><p class="muted">Explain how Aina's observable purchases, financial constraints and deeper values work together. Identify at least one evidence source and avoid claiming that all students behave alike.</p><textarea id="masteryReflection" maxlength="1200" placeholder="The receipts show... Her budget suggests... Her stated values indicate... Therefore a company could test...">${escapeHtml(old.reflection||'')}</textarea></label><button onclick="submitMasteryChallenge()">⚔ SUBMIT FINAL TRIAL</button><div id="masteryFeedback" aria-live="polite"></div><p class="muted">The three reasoning questions are scored automatically. Your written synthesis is saved but requires lecturer review; the badge acknowledges completion of the synthesis task, not automated assessment of writing quality.</p></section>`;
+}
+function submitMasteryChallenge(){
+ const m=masteryFor(state.name,state.mode);
+ mastery[state.mode+'::'+state.name.trim().toLocaleLowerCase()]=m;
+ if(Object.keys(agents).filter(k=>m.heroes?.[k]?.completed).length!==3)return;
+ const answers=masteryQuestions.map((_,i)=>{let x=document.querySelector(`input[name="masteryQ${i}"]:checked`);return x?Number(x.value):null});
+ const reflection=document.getElementById('masteryReflection').value.trim();
+ const score=answers.filter((a,i)=>a===masteryQuestions[i].right).length;
+ m.challenge=m.challenge||{};m.challenge.attempts=(m.challenge.attempts||0)+1;
+ m.challenge.draft={answers,reflection};m.challenge.lastScore=score;
+ if(answers.some(x=>x===null)){document.getElementById('masteryFeedback').textContent='Answer all three perspective questions before submitting.';persistMastery();return}
+ if(reflection.length<80){document.getElementById('masteryFeedback').textContent=`Write at least 80 characters in your synthesis (${reflection.length}/80).`;persistMastery();return}
+ if(score===3){m.challenge.passed=true;m.challenge.passedAt=new Date().toISOString();m.challenge.reflection=reflection;m.challenge.answers=answers;delete m.challenge.draft;persistMastery();render();battleFeedback(true,'Triad of Insight complete! Consumer Insight Champion unlocked.');return}
+ battleFeedback(false,`${score}/3 perspective answers correct. Review the hints and retry.`);persistMastery();document.getElementById('masteryFeedback').innerHTML=`<div class="feedback"><b>${score}/3 perspective questions correct. Review and retry.</b>${masteryQuestions.map((q,i)=>answers[i]===q.right?'':`<p>${q.role}: ${q.why}</p>`).join('')}</div>`;
+}
+function persistMastery(){try{localStorage.setItem(masteryKey,JSON.stringify(mastery))}catch(e){alert('Browser storage is unavailable; mastery may not persist.')}}
+
+
+// STRATEGY BOSS: unlocked after the three-hero synthesis challenge.
+// Objective decisions are scored by a fixed rubric; free text is stored for human assessment.
+const strategyQuestions=[
+ {title:'TARGETING · Who benefits?',prompt:'Which target is most defensible for a first campaign test?',options:['All Malaysian students, because they share the same motivations','Budget-aware campus coffee buyers who sometimes use coffee as a small reward','Only students who purchase coffee every single day','Students whose religion can be inferred from their coffee receipts'],right:1,why:'Target a specific, testable need-state without generalising to every student or inferring sensitive beliefs.'},
+ {title:'VALUE PROPOSITION · What should ZUS test?',prompt:'Which offer best fits Aina’s observed trade-offs?',options:['An expensive prestige bundle that requires daily purchases','A transparent optional student-value offer for occasional planned treats','A message that tells students to ignore their budgets','A promise that coffee will eliminate academic stress'],right:1,why:'A flexible and transparent offer respects competing expenses; the response remains a hypothesis to test.'},
+ {title:'CHANNEL · How to reach them?',prompt:'What is the most defensible low-cost first channel test?',options:['A campus-targeted opt-in digital promotion with a clear redemption measure','A nationwide campaign claiming all students have identical needs','Personal messages based on inferred religious beliefs','A campaign without a way to measure response'],right:0,why:'A small, measurable, opt-in campus test allows the company to learn before scaling.'},
+ {title:'MEASUREMENT · What proves usefulness?',prompt:'Which evidence would best indicate the strategy works?',options:['The number of impressions alone','Anecdotes from one friend','Offer redemption and repeat purchases, alongside student feedback and profitability','The number of hero badges earned in this game'],right:2,why:'Behavioural outcomes, economics and qualitative feedback together help evaluate a marketing experiment.'}
+];
+function strategyMarkup(){
+ const m=masteryFor(state.name,state.mode);
+ if(!m.challenge?.passed)return `<section class="mastery-challenge"><div class="tag">🔒 FINAL MARKETING BOSS</div><h3>THE MARKET COMMANDER</h3><p>Unlock after the Triad of Insight final trial. Apply your consumer persona to a marketing recommendation for ZUS Coffee.</p></section>`;
+ const v=m.strategy;
+ if(v?.passed)return `<section class="mastery-challenge"><div class="tag">🏆 STRATEGY BOSS DEFEATED</div><h2>Market Commander · ${v.score}/4 strategic decisions</h2><p>You've proposed a target, offer, channel and measurement plan. Your recommendation is saved in the downloadable case report for lecturer assessment.</p><p class="good">🎖️ Evidence-to-Action Strategist badge unlocked</p><button class="secondary" onclick="downloadReport()">EXPORT STRATEGY REPORT</button></section>`;
+ const d=v?.draft||{};
+ return `<section class="mastery-challenge" id="strategyMission"><div class="tag">⚔ FINAL MARKETING STRATEGY BOSS · UNLOCKED</div><h2>THE MARKET COMMANDER</h2><p><b>Mission:</b> ZUS Coffee wants a responsible, testable campus strategy based on Aina's persona. Choose your plan, then justify it. All data in this case is fictional.</p><div class="alert">Victory condition: 4/4 evidence-based strategic decisions + a written recommendation of at least 120 characters. Retry freely. Written quality is reviewed by your lecturer, not automatically graded.</div>${strategyQuestions.map((q,i)=>`<fieldset><legend>${i+1}. ${q.title}</legend><p>${q.prompt}</p>${q.options.map((o,j)=>`<label class="option"><input type="radio" name="strategyQ${i}" value="${j}" ${d.answers?.[i]===j?'checked':''}>${o}</label>`).join('')}</fieldset>`).join('')}<label><b>Campaign name</b><input id="strategyName" maxlength="70" placeholder="e.g. Small Wins, Smart Sips" value="${escapeHtml(d.campaign||'')}"></label><label><b>Evidence-to-action pitch (120–1500 characters)</b><p class="muted">State the target, consumer insight, proposed offer, communication channel, measurable success metric and one ethical safeguard. Cite at least one case evidence file or statement. Avoid treating this fictional customer as representative of all students.</p><textarea id="strategyPitch" maxlength="1500" placeholder="For budget-aware campus customers, we propose... because the receipts show... We will test... and measure...">${escapeHtml(d.pitch||'')}</textarea></label><button onclick="submitStrategy()">⚔ LAUNCH STRATEGY · ATTACK BOSS</button><div id="strategyFeedback" aria-live="polite"></div></section>`;
+}
+function submitStrategy(){
+ const m=masteryFor(state.name,state.mode);if(!m.challenge?.passed)return;
+ const answers=strategyQuestions.map((q,i)=>{const el=document.querySelector(`input[name="strategyQ${i}"]:checked`);return el?Number(el.value):null});
+ const campaign=document.getElementById('strategyName').value.trim(),pitch=document.getElementById('strategyPitch').value.trim();
+ const score=answers.filter((a,i)=>a===strategyQuestions[i].right).length;
+ m.strategy=m.strategy||{};m.strategy.attempts=(m.strategy.attempts||0)+1;m.strategy.draft={answers,campaign,pitch};m.strategy.score=score;
+ const key=state.mode+'::'+state.name.trim().toLocaleLowerCase();mastery[key]=m;persistMastery();
+ const out=document.getElementById('strategyFeedback');
+ if(answers.includes(null)){out.textContent='Select one answer for each of the four decisions.';return}
+ if(!campaign){out.textContent='Give your proposed campaign a name.';return}
+ if(pitch.length<120){out.textContent=`Expand your evidence-based pitch (${pitch.length}/120 characters).`;return}
+ if(score!==4){battleFeedback(false,`${score}/4 strategy decisions correct. Reconsider your plan.`);out.innerHTML=`<div class="feedback"><b>${score}/4 strategic decisions. Reconsider your plan and retry.</b>${strategyQuestions.map((q,i)=>answers[i]===q.right?'':`<p><b>${q.title}:</b> ${q.why}</p>`).join('')}</div>`;return}
+ m.strategy={passed:true,score,attempts:m.strategy.attempts,campaign,pitch,answers,passedAt:new Date().toISOString(),requiresLecturerReview:true};persistMastery();render();battleFeedback(true,'Marketing Strategy Boss defeated! Evidence-to-Action Strategist unlocked.');
+}
+
+function results(){let f=state.final;$('app').innerHTML=`<section class="panel"><div class="tag">VICTORY · THE EVIDENCE REALM IS SECURE</div><div class="victory">PERSONA VICTORY</div><h2>${rank(state.points)} · ${escapeHtml(state.name)}</h2><p>Hero: ${(agents[state.agent]||agents.seer).icon} ${(agents[state.agent]||agents.seer).name} · ${(agents[state.agent]||agents.seer).role}</p><div class="grid"><div class="card"><h3>${state.points} XP</h3><p>Total insight score</p></div><div class="card"><h3>${f.correct}/5</h3><p>Persona decisions correct</p></div><div class="card"><h3>+${f.evidenceBonus} XP</h3><p>Evidence quality bonus</p></div></div>${masteryMarkup(state.name,state.mode)}${masteryChallengeMarkup()}${strategyMarkup()}<h3>Debrief: the strongest working hypothesis</h3><p>Aina is a budget-conscious university student who may use an occasional coffee purchase as a manageable personal reward during busy days. Her behaviour changes when expenses compete for attention. Her independence and sense of responsibility shape the trade-off. This is a <b>synthetic case hypothesis</b>, not a verified ZUS customer insight.</p><h3>What the evidence supports</h3><p>Use spending records for behaviour, the budget file for financial context, and interview/values evidence for self-reported motivation. A marketing response worth testing is a transparent, flexible student-value proposition rather than assuming unconditional brand loyalty.</p><p class="muted">Scoring: 10 XP per purchased file; 25 XP per correct quiz; 30 XP per correct persona decision; up to 50 XP for evidence selection. Credits are a spending currency, not leaderboard points.</p><div class="grid"><div class="achievement">🏅 <b>CASE CLEARED</b><p>Complete the persona boss battle.</p></div><div class="achievement">${state.opened.length>=5?'💎 <b>VAULT HUNTER</b>':'🔒 <b>VAULT HUNTER</b>'}<p>Unlock five evidence files.</p></div><div class="achievement">${f.correct===5?'👑 <b>PERFECT ANALYST</b>':'🔒 <b>PERFECT ANALYST</b>'}<p>Get all five final decisions correct.</p></div></div><button onclick="downloadReport()">DOWNLOAD CASE REPORT</button><button class="secondary" onclick="restart()">PLAY AGAIN WITH A DIFFERENT HERO ↻</button></section>`}
+function downloadReport(){let report={game:'Persona Quest: Operation Black Bean',fictional:true,player:state.name,mode:state.mode,agent:state.agent,abilityUsed:state.abilityUsed,score:state.points,rank:rank(state.points),openedFiles:state.opened,quizResults:state.reasons,final:state.final,mastery:masteryFor(state.name,state.mode),championUnlocked:!!masteryFor(state.name,state.mode).challenge?.passed,masteryChallenge:masteryFor(state.name,state.mode).challenge||null,strategyBoss:masteryFor(state.name,state.mode).strategy||null,strategyBadgeUnlocked:!!masteryFor(state.name,state.mode).strategy?.passed,completedAt:new Date().toISOString()};let blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='persona-quest-'+state.name.replace(/[^a-z0-9]/gi,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function restart(){if(!confirm('Start a new mission? Your current saved run will be replaced. Download your case report first if needed. Your Hero Mastery badges will be preserved.'))return;let name=state.name,mode=state.mode,agent=state.agent;chosenAgent=agent;state=base();save();render();if($('player')){$('player').value=name;$('mode').value=mode;$('player').addEventListener('input',showWelcomeMastery);$('mode').addEventListener('change',showWelcomeMastery);showWelcomeMastery()}}
+// Independent battle feedback: sound effects never mute, stop or change background music.
+let noticeTimeout=null,sfxCtx=null,sfxGain=null;
+function battleFeedback(success,message){
+ const panel=document.getElementById('battleNotice');
+ if(panel){
+  clearTimeout(noticeTimeout);
+  panel.classList.remove('show','danger','levelup');
+  document.getElementById('noticeIcon').textContent=success?'⬆️':'⚠️';
+  document.getElementById('noticeTitle').textContent=success?'LEVEL UP!':'DANGER!';
+  document.getElementById('noticeMessage').textContent=message;
+  panel.classList.add(success?'levelup':'danger');
+  void panel.offsetWidth;panel.classList.add('show');
+  noticeTimeout=setTimeout(()=>panel.classList.remove('show'),3200);
+ }
+ playBattleSound(success);
+}
+function playBattleSound(success){
+ try{
+  const AudioClass=window.AudioContext||window.webkitAudioContext;
+  if(!AudioClass)return;
+  // Share the existing AudioContext if present, but use a separate output bus.
+  const ctx=musicCtx||(sfxCtx||(sfxCtx=new AudioClass()));
+  if(ctx.state==='suspended')ctx.resume().catch(()=>{});
+  if(!sfxGain||sfxGain.context!==ctx){sfxGain=ctx.createGain();sfxGain.gain.value=0.38;sfxGain.connect(ctx.destination)}
+  const start=ctx.currentTime+0.015;
+  const notes=success?[[523.25,0,.12],[659.25,.11,.12],[783.99,.22,.15],[1046.5,.35,.33]]:[[392,0,.16],[311.13,.15,.17],[196,.30,.36]];
+  notes.forEach(([freq,offset,duration],index)=>{
+   const osc=ctx.createOscillator(),gain=ctx.createGain();
+   osc.type=success?'triangle':'sawtooth';osc.frequency.setValueAtTime(freq,start+offset);
+   if(!success)osc.frequency.exponentialRampToValueAtTime(freq*.83,start+offset+duration);
+   gain.gain.setValueAtTime(.0001,start+offset);
+   gain.gain.exponentialRampToValueAtTime(success?.24:.16,start+offset+.018);
+   gain.gain.exponentialRampToValueAtTime(.0001,start+offset+duration);
+   osc.connect(gain);gain.connect(sfxGain);osc.start(start+offset);osc.stop(start+offset+duration+.025);
+  });
+ }catch(e){/* Visual feedback remains available when audio is blocked. */}
+}
+
+// ORIGINAL SOUNDTRACK: "Evidence Realm" — generated in-browser with Web Audio.
+// No copyrighted samples, remote requests, downloads, or audio assets.
+// Browsers require a user click before sound can start.
+const musicPrefKey='personaQuestMusicV1';
+let musicPrefs={volume:35};
+try{const saved=JSON.parse(localStorage.getItem(musicPrefKey));if(saved&&Number.isFinite(Number(saved.volume)))musicPrefs.volume=Math.max(0,Math.min(100,Number(saved.volume)))}catch(e){}
+let musicCtx=null,musicMaster=null,musicTimer=null,musicStep=0,musicNextTime=0,musicPlaying=false;
+const musicTempo=106,musicBeat=60/musicTempo,musicStepLength=musicBeat/2;
+const musicProgression=[
+ {bass:110,chord:[220,261.63,329.63],arp:[440,523.25,659.25,523.25]}, // Am
+ {bass:87.31,chord:[174.61,220,261.63],arp:[349.23,440,523.25,440]}, // F
+ {bass:130.81,chord:[261.63,329.63,392],arp:[523.25,659.25,783.99,659.25]}, // C
+ {bass:98,chord:[196,246.94,293.66],arp:[392,493.88,587.33,493.88]} // G
+];
+function musicTone(freq,when,duration,type,level,attack=0.02){
+ if(!musicCtx||!musicMaster)return;
+ const osc=musicCtx.createOscillator(),env=musicCtx.createGain();
+ osc.type=type;osc.frequency.setValueAtTime(freq,when);
+ env.gain.setValueAtTime(0.0001,when);
+ env.gain.exponentialRampToValueAtTime(Math.max(level,0.0002),when+attack);
+ env.gain.exponentialRampToValueAtTime(0.0001,when+duration);
+ osc.connect(env);env.connect(musicMaster);osc.start(when);osc.stop(when+duration+0.04);
+}
+function musicDrum(when,strong){
+ if(!musicCtx||!musicMaster)return;
+ const osc=musicCtx.createOscillator(),env=musicCtx.createGain();
+ osc.type='sine';osc.frequency.setValueAtTime(strong?125:92,when);osc.frequency.exponentialRampToValueAtTime(46,when+0.13);
+ env.gain.setValueAtTime(strong?0.16:0.08,when);env.gain.exponentialRampToValueAtTime(0.0001,when+0.17);
+ osc.connect(env);env.connect(musicMaster);osc.start(when);osc.stop(when+0.19);
+}
+function musicSchedule(step,when){
+ const bar=Math.floor(step/8),part=step%8,h=musicProgression[Math.floor(bar/2)%4];
+ if(part===0){
+  h.chord.forEach((n,i)=>musicTone(n,when,3.6*musicBeat,'sine',0.025,0.3+i*0.03));
+  musicTone(h.bass/2,when,1.7*musicBeat,'triangle',0.14,0.03);
+ }
+ if(part===4)musicTone(h.bass/2,when,1.35*musicBeat,'triangle',0.1,0.03);
+ if(part%2===0)musicDrum(when,part===0||part===4);
+ if(part%2===1)musicTone(h.arp[Math.floor(part/2)],when,0.38*musicBeat,'triangle',0.055,0.01);
+ if(part===6)musicTone(h.arp[2]/2,when,0.45*musicBeat,'sine',0.032,0.01);
+}
+function musicTick(){
+ if(!musicCtx||!musicPlaying)return;
+ while(musicNextTime<musicCtx.currentTime+0.25){musicSchedule(musicStep,musicNextTime);musicNextTime+=musicStepLength;musicStep++}
+}
+function musicUI(message){
+ const btn=document.getElementById('musicToggle'),status=document.getElementById('musicStatus'),vol=document.getElementById('musicVolume');
+ if(btn){btn.textContent=musicPlaying?'♫ Pause music':'♫ Play music';btn.setAttribute('aria-pressed',String(musicPlaying))}
+ if(vol)vol.value=String(musicPrefs.volume);
+ if(status)status.textContent=message||(musicPlaying?'Original fantasy soundtrack playing':'Optional · off by default');
+}
+function setMusicVolume(value){
+ musicPrefs.volume=Math.max(0,Math.min(100,Number(value)||0));
+ try{localStorage.setItem(musicPrefKey,JSON.stringify(musicPrefs))}catch(e){}
+ if(musicMaster&&musicCtx)musicMaster.gain.setTargetAtTime((musicPrefs.volume/100)*0.42,musicCtx.currentTime,0.04);
+ musicUI();
+}
+async function toggleMusic(){
+ if(musicPlaying){
+  musicPlaying=false;clearInterval(musicTimer);musicTimer=null;
+  if(musicMaster&&musicCtx)musicMaster.gain.setTargetAtTime(0.0001,musicCtx.currentTime,0.035);
+  musicUI('Paused · tap Play to resume');return;
+ }
+ const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+ if(!AudioContextClass){musicUI('Audio unavailable in this browser');return}
+ try{
+  if(!musicCtx){musicCtx=new AudioContextClass();musicMaster=musicCtx.createGain();musicMaster.gain.value=0.0001;musicMaster.connect(musicCtx.destination)}
+  await musicCtx.resume();
+  musicPlaying=true;musicNextTime=musicCtx.currentTime+0.08;
+  musicMaster.gain.setTargetAtTime((musicPrefs.volume/100)*0.42,musicCtx.currentTime,0.07);
+  musicTick();musicTimer=setInterval(musicTick,90);musicUI();
+ }catch(e){musicPlaying=false;musicUI('Audio blocked · try tapping again')}
+}
+document.addEventListener('visibilitychange',()=>{
+ // Pause when the student switches tabs or locks the phone; do not restart unexpectedly.
+ if(document.hidden&&musicPlaying){musicPlaying=false;clearInterval(musicTimer);musicTimer=null;
+  if(musicMaster&&musicCtx)musicMaster.gain.setTargetAtTime(0.0001,musicCtx.currentTime,0.025);
+  musicUI('Paused in background · tap Play to resume')}
+});
+musicUI();
+render();
+</script></body></html>
